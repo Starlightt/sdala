@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+
+    <title>Online Shopping</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script> 
+  <style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+
+<body>
+  
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Shopping Dala</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+	<div class="container text-center"> 
+  <p class="bg-info text-white">Shopping Online</p>   
+  <br>
+  <div class="row">
+    <div class="col-6 col-sm-4 col-md-3"><a href="https://amzn.to/2lblJpB">
+      <img src="image/amazon.png" class="img-fluid" width="150px" height="50px"     alt="Image"></a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3"><a href="http://fkrt.it/ye8y7KNNNN">
+      <img src="image/flipkart.jpg" class="img-fluid" width="150px" height="50px"     alt="Image"></a>
+   
+    </div>
+    <div class="col-6 col-sm-4 col-md-3"><a href="https://jabong.com">
+      <img src="image/jabong.png" class="img-fluid" width="150px" height="50px"     alt="Image"></a>
+ 
+    </div>
+    <div class="col-6 col-sm-4 col-md-3"> <a href="https://www.snapdeal.com">
+      <img src="image/snapdeal.png" class="img-fluid" width="150px" height="50px"     alt="Image"></a>
+
+    </div> 
+    <div class="col-6 col-sm-4 col-md-3"><a href="https://www.shopclues.com"> 
+      <img src="image/shopclues.png" class="img-fluid" width="150px" height="50px"     alt="Image"></a>
+ 
+    </div>     
+    <div class="col-6 col-sm-4 col-md-3"> <a href="https://www.ebay.in">
+      <img src="image/ebay.png"  class="img-fluid" width="150px" height="50px" alt="Image"></a>
+
+    </div> 
+    <div class="col-6 col-sm-4 col-md-3"><a href="https://www.myntra.com"> 
+      <img src="image/myntra.jpg" class="img-fluid"  width="150px" height="50px" alt="Image"></a>
+  
+    </div> 
+    <div class="col-6 col-sm-4 col-md-3"> <a href="https://paytmmall.com">
+      <img src="image/paytm.jpg" class="img-fluid"  width="150px" height="80px"    alt="Image">
+      </a>
+    </div>
+  </div>
+</div><br>
+
+<div class="container text-center"> 
+  <p class="bg-info text-white">Deal Of The Day</p>   
+  <br>
+  <div class="row">
+    <div class="col-6 col-sm-4 col-md-3"><a href="https://amzn.to/2JMcGGl">
+      <img src="image/amazon.png" class="img-fluid" width="150px" height="50px"     alt="Image"></a>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3"><a href="http://fkrt.it/ABnh1nuuuN">
+      <img src="image/flipkart.jpg" class="img-fluid" width="150px" height="50px"     alt="Image"></a>
+   
+    </div>
+    <div class="col-6 col-sm-4 col-md-3"><a href="https://www.jabong.com/all-products/">
+      <img src="image/jabong.png" class="img-fluid" width="150px" height="50px"     alt="Image"></a>
+ 
+    </div>
+    <div class="col-6 col-sm-4 col-md-3"> <a href="https://www.snapdeal.com/offers/deal-of-the-day">
+      <img src="image/snapdeal.png" class="img-fluid" width="150px" height="50px"     alt="Image"></a>
+
+    </div> 
+    <div class="col-6 col-sm-4 col-md-3"><a href="https://www.shopclues.com/dealsoftheday.html"> 
+      <img src="image/shopclues.png" class="img-fluid" width="150px" height="50px"     alt="Image"></a>
+ 
+    </div>     
+    <div class="col-6 col-sm-4 col-md-3"> <a href="https://www.ebay.in/deals">
+      <img src="image/ebay.png"  class="img-fluid" width="150px" height="50px" alt="Image"></a>
+
+    </div> 
+    <div class="col-6 col-sm-4 col-md-3"><a href="https://www.myntra.com/deal-of-the-day"> 
+      <img src="image/myntra.jpg" class="img-fluid"  width="150px" height="50px" alt="Image"></a>
+  
+    </div> 
+    <div class="col-6 col-sm-4 col-md-3"> <a href="https://paytmmall.com/other-deals-llpid-83617">
+      <img src="image/paytm.jpg" class="img-fluid"  width="150px" height="80px"    alt="Image">
+      </a>
+    </div>
+  </div>
+</div><br>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
